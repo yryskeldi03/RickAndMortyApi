@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Rick&amp;MortyApi</string>
+    <string name="characters">Characters</string>
+    <string name="episode">Episode</string>
+    <string name="location">Location:</string>
+    <string name="gender">Gender:</string>
+    <string name="character_photo">character photo</string>
+    <string name="status_alive">Alive</string>
+    <string name="status_dead">Dead</string>
+    <string name="details">Details</string>
+    <string name="name">Name:</string>
+    <string name="type">Type:</string>
+    <string name="air_date">Air date:</string>
+    <string name="search">Search</string>
+    <string name="status">Status:</string>
+    <string name="species">Species:</string>
+    <string name="dimension">Dimension:</string>
+    <string name="created">Created:</string>
+    <string name="episode_title">Episode:</string>
+    <string name="filter_characters">Filter Characters</string>
+    <string name="choose_status">Choose status:</string>
+    <string name="unknown">Unknown</string>
+    <string name="choose_gender">Choose gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="genderless">Genderless</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_character_name">Enter character name</string>
+</resources>
