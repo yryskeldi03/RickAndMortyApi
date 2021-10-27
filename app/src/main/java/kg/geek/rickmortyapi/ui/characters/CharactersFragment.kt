@@ -43,7 +43,12 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>() {
         })
 
         binding.rvCharacters.adapter = adapter
-        
+
+        binding.ivFilter.setOnClickListener {
+            val dialog = CustomDialogFragment()
+            dialog.show(parentFragmentManager, "customDialog")
+        }
+
     }
 
     @SuppressLint("NotifyDataSetChanged")
