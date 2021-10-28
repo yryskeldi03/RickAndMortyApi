@@ -8,8 +8,6 @@ import kg.geek.rickmortyapi.extensions.visible
 import kg.geek.rickmortyapi.ui.characters.CharactersFragment
 import kg.geek.rickmortyapi.ui.episode.EpisodeFragment
 import kg.geek.rickmortyapi.ui.location.LocationsFragment
-import kg.geek.rickmortyapi.ui.search.SearchFragment
-import kg.geek.rickmortyapi.utils.Constants
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailFragment : BaseFragment<FragmentDetailBinding>() {

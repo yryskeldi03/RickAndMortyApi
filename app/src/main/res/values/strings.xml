@@ -26,4 +26,11 @@
     <string name="genderless">Genderless</string>
     <string name="cancel">Cancel</string>
     <string name="enter_character_name">Enter character name</string>
+    <string name="choose">Choose</string>
+    <string name="unknown_status">unknown</string>
+    <string name="apply">Apply</string>
+    <string name="avatar">avatar</string>
+    <string name="error">Error</string>
+    <string name="enter_location_name">Enter a location name</string>
+    <string name="enter_episode_name">Enter a episode name</string>
 </resources>

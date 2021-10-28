@@ -2,8 +2,6 @@ package kg.geek.rickmortyapi.ui.search
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.navigation.fragment.findNavController
 import kg.geek.rickmortyapi.R
 import kg.geek.rickmortyapi.core.BaseFragment
@@ -15,9 +13,9 @@ import kg.geek.rickmortyapi.extensions.visible
 import kg.geek.rickmortyapi.ui.characters.CharactersFragment
 import kg.geek.rickmortyapi.ui.episode.EpisodeFragment
 import kg.geek.rickmortyapi.ui.location.LocationsFragment
-import kg.geek.rickmortyapi.utils.Constants
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@SuppressLint("NotifyDataSetChanged")
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
     private val viewModel: SearchViewModel by viewModel()
     private var list = arrayListOf<Character>()
@@ -42,7 +40,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
     private fun getFilteredData(name: String) {
 
-        viewModel.getFilteredLocations(name).observe(viewLifecycleOwner) { response ->
+        viewModel.getLocationsByName(name).observe(viewLifecycleOwner) { response ->
             when (response.status) {
                 Status.SUCCESS -> {
                     viewModel.loading.value = false
@@ -58,7 +56,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
                 }
             }
         }
-        viewModel.getFilteredCharacters(name).observe(viewLifecycleOwner) { response ->
+        viewModel.getCharactersByName(name).observe(viewLifecycleOwner) { response ->
             when (response.status) {
                 Status.SUCCESS -> {
                     viewModel.loading.value = false
@@ -74,7 +72,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
                 }
             }
         }
-        viewModel.getFilteredEpisodes(name).observe(viewLifecycleOwner) { response ->
+        viewModel.getEpisodesByName(name).observe(viewLifecycleOwner) { response ->
             when (response.status) {
                 Status.SUCCESS -> {
                     viewModel.loading.value = false
@@ -90,6 +88,8 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
                 }
             }
         }
+
+
     }
 
     private fun clickListener(type: String, id: Int) {

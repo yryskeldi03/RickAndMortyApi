@@ -1,6 +1,7 @@
 package kg.geek.rickmortyapi.di
 
 import kg.geek.rickmortyapi.ui.characters.CharactersViewModel
+import kg.geek.rickmortyapi.ui.details.DetailsViewModel
 import kg.geek.rickmortyapi.ui.episode.EpisodesViewModel
 import kg.geek.rickmortyapi.ui.location.LocationsViewModel
 import kg.geek.rickmortyapi.ui.search.SearchViewModel
@@ -13,4 +14,5 @@ val viewModules: Module = module {
     viewModel { LocationsViewModel(get()) }
     viewModel { EpisodesViewModel(get()) }
     viewModel { SearchViewModel(get()) }
+    viewModel { DetailsViewModel(get()) }
 }

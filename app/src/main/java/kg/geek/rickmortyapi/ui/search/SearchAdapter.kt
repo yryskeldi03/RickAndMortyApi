@@ -12,7 +12,13 @@ import kg.geek.rickmortyapi.extensions.load
 import kg.geek.rickmortyapi.ui.characters.CharactersFragment
 import kg.geek.rickmortyapi.ui.episode.EpisodeFragment
 import kg.geek.rickmortyapi.ui.location.LocationsFragment
-import kg.geek.rickmortyapi.utils.Constants
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
+
+/*
+
+ */
 
 class SearchAdapter(
     private var filteredItems: ArrayList<Character>,
@@ -118,8 +124,8 @@ class SearchAdapter(
             binding.tvLocationName.text = location.name
             binding.tvType.text = location.type
 
-                itemView.setOnClickListener {
-                    location.id?.let { it1 -> clickListener(LocationsFragment.LOCATION_ID, it1) }
+            itemView.setOnClickListener {
+                location.id?.let { it1 -> clickListener(LocationsFragment.LOCATION_ID, it1) }
             }
         }
     }
